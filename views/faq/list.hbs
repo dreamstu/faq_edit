@@ -1,0 +1,26 @@
+{{!< ../layout}}
+{{#contentFor "faq_body"}}
+    <h1>FAQ列表</h1>
+    <ol class="breadcrumb">
+        <li class="active"><a href="/new/faq"><span class="glyphicon glyphicon-plus"></span>新增FAQ</a></li>
+    </ol>
+    {{#if faqs}}
+        {{#each faqs}}
+            <div class="media">
+                <a class="media-left media-middle" href="#">
+                    <img src="http://www.gravatar.com/avatar/a01610228fe998f515a72dd730294d87?s=48" alt="http://www.gravatar.com/avatar/a01610228fe998f515a72dd730294d87?s=48">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">{{title}}</h4>
+                    <p>
+                        <a class="label label-primary" href="/faq/edit/{{id}}">编辑</a>
+                        <a class="label label-primary" href="/faq/preview/{{id}}">预览</a>
+                        <a class="label label-primary" href="/faq/delete/{{id}}">删除</a>
+                    </p>
+                </div>
+            </div>
+        {{/each}}
+    {{else}}
+        <p>暂时还没有FAQ，你可以去<a href="/new/faq">写一篇FAQ</a></p>
+    {{/if}}
+{{/contentFor}}

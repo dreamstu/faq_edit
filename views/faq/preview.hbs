@@ -1,0 +1,25 @@
+{{!< ../layout}}
+{{#contentFor "faq_body"}}
+    <ol class="breadcrumb">
+        <li class="active"><a href="/list/faq">返回列表</a></li>
+    </ol>
+
+    <h1>{{faq.title}}</h1>
+    <article id="content">
+        {{{faq.content}}}
+    </article>
+
+    <p>作者：{{faq.author}} | 时间：{{{faq.time}}} | 状态：{{faq.state}}</p>
+
+    <hr/>
+    <p>FAQ操作：<a class="label label-default" href="/faq/edit/{{faq.id}}">编辑</a>|<a class="label label-default" href="/faq/delete/{{faq.id}}">删除</a></p>
+{{/contentFor}}
+
+{{# contentFor "faq_js"}}
+    <script src="/public/ueditor/ueditor.parse.min.js"></script>
+    <script>
+        uParse('#content',{
+            rootPath:'/public/ueditor/'
+        });
+    </script>
+{{/contentFor}}

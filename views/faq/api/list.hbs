@@ -1,0 +1,12 @@
+{{!< layout}}
+{{#contentFor "faq_body"}}
+    {{#compare faqs.length 0 }}
+        <div>没有条目。</div>
+    {{else}}
+        <ul>
+        {{#each faqs}}
+            <li><a href="/api/faq/view/detail/{{id}}" data-id="{{id}}" class="faq-item">{{title}}</a></li>
+        {{/each}}
+        </ul>
+    {{/compare}}
+{{/contentFor}}

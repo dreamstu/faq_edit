@@ -1,0 +1,17 @@
+{{!< layout}}
+{{#contentFor "faq_body"}}
+
+    <p class="text-success">{{{content}}}<span class="glyphicon glyphicon-ok"></span></p>
+
+    {{#if user}}
+        <article>
+            <p>
+                <ul>
+                    <li><a href="/new/faq"><span class="glyphicon glyphicon-plus"></span> 来一篇FAQ</a></li>
+                    <li><a href="/new/category"><span class="glyphicon glyphicon-plus"></span> 来一个分组</a></li>
+                    <li><a href="/list/faq"><span class="glyphicon glyphicon-list"></span> FAQ列表</a></li>
+                </ul>
+            </p>
+        </article>
+    {{/if}}
+{{/contentFor}}
