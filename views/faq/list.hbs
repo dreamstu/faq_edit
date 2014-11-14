@@ -6,16 +6,13 @@
     </ol>
     {{#if faqs}}
         {{#each faqs}}
-            <div class="media">
-                <a class="media-left media-middle" href="#">
-                    <img src="http://www.gravatar.com/avatar/a01610228fe998f515a72dd730294d87?s=48" alt="http://www.gravatar.com/avatar/a01610228fe998f515a72dd730294d87?s=48">
-                </a>
+            <div class="col-md-4 media">
                 <div class="media-body">
                     <h4 class="media-heading">{{title}}</h4>
                     <p>
-                        <a class="label label-primary" href="/faq/edit/{{id}}">编辑</a>
-                        <a class="label label-primary" href="/faq/preview/{{id}}">预览</a>
-                        <a class="label label-primary" href="/faq/delete/{{id}}">删除</a>
+                        <a class="label label-info" href="/faq/edit/{{id}}">编辑</a>
+                        <a class="label label-success" href="/faq/preview/{{id}}">预览</a>
+                        <a class="label label-danger" href="/faq/delete/{{id}}">删除</a>
                     </p>
                 </div>
             </div>

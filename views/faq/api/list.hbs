@@ -10,3 +10,13 @@
         </ul>
     {{/compare}}
 {{/contentFor}}
+
+{{#contentFor "faq_js"}}
+    <script>
+        $(function(){
+            $('.faq-item').on('click',function(){
+                window.parent.window.addbreadcrumb($(this).text());
+            });
+        });
+    </script>
+{{/contentFor}}

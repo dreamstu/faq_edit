@@ -33,3 +33,10 @@
 .faq-footer-links li:first-child {
     padding-left: 0;
 }
+
+.carousel-inner .item{
+    height: 250px;
+}
+.banner-image{
+    width: 100%;
+}

@@ -4,15 +4,27 @@
         <li class="active"><a href="/list/faq">返回列表</a></li>
     </ol>
 
-    <h1>{{faq.title}}</h1>
-    <article id="content">
-        {{{faq.content}}}
-    </article>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h1>{{faq.title}}</h1>
+            <article id="content">
+                {{{faq.content}}}
+            </article>
 
-    <p>作者：{{faq.author}} | 时间：{{{faq.time}}} | 状态：{{faq.state}}</p>
+            <p></p>
+            <p>作者：{{faq.author}}</p>
+            <p>时间：{{{faq.time}}}</p>
+            <p>状态：{{faq.state}}</p>
+        </div>
+    </div>
 
-    <hr/>
-    <p>FAQ操作：<a class="label label-default" href="/faq/edit/{{faq.id}}">编辑</a>|<a class="label label-default" href="/faq/delete/{{faq.id}}">删除</a></p>
+    <p>
+        FAQ操作：
+        <a class="label label-info" href="{{remoteUrl}}/faq/index.html?id={{faq.id}}&category={{faq.category}}" target="_blank">在“{{remoteName}}”中预览</a>
+        <a class="label label-warning" href="/faq/edit/{{faq.id}}">编辑</a>
+        <a class="label label-danger" href="/faq/delete/{{faq.id}}">删除</a>
+    </p>
+
 {{/contentFor}}
 
 {{# contentFor "faq_js"}}

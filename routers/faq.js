@@ -2,6 +2,7 @@ var faq= {};
 var $faq = require('../models/faq');
 var $category = require('../models/category');
 var $p = require('../utils/params.utils');
+var settings = require('../settings');
 var _ = require('underscore');
 faq.new = function(req,res){
     var method = req.method;
@@ -98,7 +99,9 @@ faq.preview = function(req,res){
         }else{
             res.render('faq/preview',$p(req,{
                 title:'FAQ预览',
-                faq:faq[0]
+                faq:faq[0],
+                remoteUrl:settings.faq.preview.remoteUrl,
+                remoteName:settings.faq.preview.remoteName
             }));
         }
     })
